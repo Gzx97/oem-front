@@ -1,0 +1,320 @@
+@import "../../styles/_common";
+
+#Jianshang {
+  position: relative;
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 6rem 1.6rem;
+  // background: #FFFFFF;
+  padding-bottom: 6rem;
+  -webkit-touch-callout: none;
+  /*系统默认菜单被禁用*/
+  -webkit-user-select: none;
+  /*webkit浏览器*/
+  -khtml-user-select: none;
+  /*早期浏览器*/
+  -moz-user-select: none;
+  /*火狐*/
+  -ms-user-select: none;
+  /*IE10*/
+  user-select: none;
+
+  .cp_top_box {
+    display: flex;
+    padding: 2rem 0;
+
+    .cp_left {
+      width: 10.6rem;
+      height: 10rem;
+      margin-right: 1.6rem;
+
+      .img_box {
+        width: 10.6rem;
+        height: 10rem;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        position: relative;
+        overflow: hidden;
+
+        img {
+          width: auto;
+          height: auto;
+          max-width: 100%;
+          max-height: 100%;
+          /* 向父元素定位 */
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+
+    .cp_right {
+      position: relative;
+
+      p {
+        margin: 0;
+        font-size: 11px;
+        font-weight: 400;
+        color: #FFFFFF;
+        line-height: 22px;
+      }
+
+      span {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        color: #EB4632;
+        font-size: 1.1rem;
+        text-decoration: underline;
+      }
+    }
+  }
+
+
+  .tab_box {
+    display: flex;
+    border-bottom: 1px solid #2E3546;
+
+    .tab_title {
+      padding: 1.6rem;
+
+      font-size: 1.2rem;
+      box-sizing: border-box;
+    }
+
+    .active_title {
+      color: #EB4632;
+      border-bottom: 1px #EB4632 solid;
+    }
+  }
+
+  // 薪火相传
+  .xhxc {
+    margin-top: 3rem;
+
+    .am-steps-item-title {
+      width: 100%;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      width: 100%;
+      font-weight: 600;
+      color: #FFFFFF;
+      line-height: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+    }
+
+    .xh_info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      p {
+        flex: 2;
+        margin: 1.3rem 0;
+        font-size: 1.2rem;
+        line-height: 2.2rem;
+        margin-right: 3rem;
+        color: #6D778B;
+
+        span {
+          color: #EEEFF0;
+          font-size: 1.2rem;
+          margin-top: 1rem;
+          text-decoration: none;
+          display: block;
+        }
+      }
+
+      .btn {
+        flex: 1;
+        width: 10rem;
+        height: 3rem;
+        background: linear-gradient(135deg, #EE5035 0%, #E32A2A 100%);
+        border-radius: 5px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+      }
+
+      .lq {
+        border-radius: 5px;
+        border: 1px solid #EE5035;
+        background: none;
+        color: #EB4632;
+      }
+    }
+  }
+
+  // 挑战任务
+  ul {
+    @include clearList;
+    padding-top: 3rem;
+
+    // background-color: rgba(27, 32, 36, 1);
+    li {
+      background: #1A202E;
+      border-radius: 0px 0px 4px 4px;
+      padding: 1.5rem;
+      margin-bottom: 3rem;
+
+      h4 {
+        margin: 0;
+        color: #EB4632;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 1.4rem;
+        font-weight: 600;
+        line-height: 2rem;
+
+        i {
+          color: white;
+          font-size: 1.2rem;
+        }
+      }
+
+      .li_info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+          flex: 2;
+          margin: 1.3rem 0;
+          font-size: 1.2rem;
+          line-height: 2.2rem;
+          margin-right: 3rem;
+          color: #6D778B;
+
+          span {
+            color: #EEEFF0;
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            text-decoration: none;
+            display: block;
+          }
+        }
+
+        .btn {
+          flex: 1;
+          width: 10rem;
+          height: 3rem;
+          background: linear-gradient(135deg, #EE5035 0%, #E32A2A 100%);
+          border-radius: 5px;
+          color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 1.2rem;
+        }
+      }
+
+      span {
+        color: #EB4632;
+        font-size: 1.2rem;
+        text-decoration: underline;
+
+      }
+    }
+  }
+
+  // 购买完成弹框
+  .my_modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    // animation: change 1s;
+    // -moz-animation: change 1s;
+    // -webkit-animation: change 1s;
+    // -o-animation: change 1s;
+
+    .modal_mask {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      height: 100%;
+      z-index: 999;
+      background-color: rgba(14, 6, 6, 0.9);
+    }
+
+    .modal_content {
+      position: relative;
+      z-index: 1000;
+      margin-top: 10rem;
+      // text-align: center;
+
+      h3 {
+        margin: 4.5rem;
+        margin-bottom: 2rem;
+        color: white;
+        font-size: 2rem;
+        text-align: center;
+        line-height: 4rem;
+      }
+
+      .img_box {
+        display: flex;
+        justify-content: center;
+
+        .mh_img {
+          width: 23.6rem;
+        }
+      }
+
+
+      .kh {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 5rem;
+
+        span {
+          width: 12.7rem;
+          height: 3.7rem;
+          font-size: 1.4rem;
+          border-radius: 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        // span:nth-of-type(1) {
+        //   background-color: white;
+        //   color: #000;
+
+        //   img {
+        //     height: 2.5rem;
+        //     margin-right: 1rem;
+        //   }
+        // }
+
+        span:nth-of-type(1) {
+          background: linear-gradient(135deg, #EE5035 0%, #E32A2A 100%);
+          color: white;
+        }
+
+        span:nth-of-type(2) {
+          background: linear-gradient(135deg, #EE5035 0%, #E32A2A 100%);
+          color: white;
+        }
+      }
+    }
+  }
+
+
+}

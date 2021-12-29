@@ -1,0 +1,59 @@
+@import '../../styles/_common';
+
+#AddPayment {
+  @include clearFix;
+  position: relative;
+  box-sizing: border-box;
+  // background: linear-gradient(180deg, rgba(14, 24, 40, 1) 0%, rgba(9, 14, 25, 1) 100%);
+  // background: rgba(246, 247, 251, 1);
+  min-height: 100vh;
+  padding-top: 6rem;
+  -webkit-touch-callout: none;
+  /*系统默认菜单被禁用*/
+  -webkit-user-select: none;
+  /*webkit浏览器*/
+  -khtml-user-select: none;
+  /*早期浏览器*/
+  -moz-user-select: none;
+  /*火狐*/
+  -ms-user-select: none;
+  /*IE10*/
+  user-select: none;
+
+  ul {
+    @include clearList;
+    // margin-top: 2rem;
+    padding: 1.6rem;
+
+    li:nth-of-type(1) {
+      margin-top: 0;
+    }
+
+    li {
+      position: relative;
+      margin-top: 2rem;
+      padding: 2.4rem 1.8rem;
+      background-color: rgba(26, 32, 46, 1);
+      border-radius: 1rem;
+      display: flex;
+      align-items: center;
+      
+      img{
+        width: 2.4rem;
+        margin-right: 1rem;
+      }
+      h3{
+        font-size: 1.6rem;
+        color: white;
+      }
+      .right_icon{
+        position: absolute;
+        right: 1.8rem;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+
+}

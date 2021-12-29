@@ -1,0 +1,219 @@
+@import '../../styles/_common';
+
+#TradeList {
+  @include clearFix;
+  position: relative;
+  box-sizing: border-box;
+  // background: linear-gradient(180deg, rgba(14, 24, 40, 1) 0%, rgba(9, 14, 25, 1) 100%);
+  min-height: 100vh;
+  padding: 0 1.6rem;
+  padding-top: 6rem;
+  padding-bottom: 8rem;
+  -webkit-touch-callout: none;
+  /*系统默认菜单被禁用*/
+  -webkit-user-select: none;
+  /*webkit浏览器*/
+  -khtml-user-select: none;
+  /*早期浏览器*/
+  -moz-user-select: none;
+  /*火狐*/
+  -ms-user-select: none;
+  /*IE10*/
+  user-select: none;
+
+  .search {
+    // margin: 0 1.6rem;
+    margin-bottom: 2rem;
+    position: relative;
+    border-radius: 2rem;
+    overflow: hidden;
+    z-index: 99;
+
+    .search_icon {
+      position: absolute;
+      z-index: 100;
+      top: 0;
+      bottom: 0;
+      left: 1rem;
+      width: 1.6rem;
+      height: 1.7rem;
+      margin: auto;
+    }
+
+    .search_cross {
+      position: absolute;
+      z-index: 100;
+      top: 0;
+      bottom: 0;
+      right: 1rem;
+      width: 1.6rem;
+      height: 1.7rem;
+      margin: auto;
+    }
+
+    input {
+      width: 100%;
+      height: 4.5rem;
+      padding-left: 3.5rem;
+      // border: 1px solidrgba(27, 32, 36, 1);
+      box-sizing: border-box;
+      //   padding-right: 20px;
+      background: #1a202e;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      color: white;
+      -webkit-appearance: none !important;
+      /*去除阴影边框*/
+
+      &::placeholder {
+        // color: @font-sub-color;
+      }
+    }
+  }
+
+  // 筛选条件
+  .saixuan {
+    display: flex;
+    padding-bottom: 1.6rem;
+    .modal_mask {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      height: 100%;
+      z-index: 999;
+      background-color: rgba(14, 6, 6, 0.3);
+    }
+    .sort_text {
+      position: relative;
+      display: flex;
+      align-items: center;
+      .xiala{
+        position: absolute;
+        top: 3rem;
+        background:#1a202e ;
+        z-index: 1000;
+        padding:  1rem;
+        border-radius: .2rem;
+     
+        i{
+          display: block;
+          line-height: 2.5em;
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+    span {
+      flex: 1;
+      color: #F8F8F8;
+      font-size: 1.4rem;
+      line-height: 2rem;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .span_active {
+      color: #EC4933;
+    }
+
+    span:first-child {
+      justify-content: flex-start;
+    }
+
+    span:last-child {
+      justify-content: flex-end;
+    }
+  }
+
+  ul {
+    li {
+      float: left;
+      width: 47%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: rgba(26, 32, 46, 1);
+      margin-bottom: 1.6rem;
+      padding: 1.5rem;
+      box-sizing: border-box;
+      position: relative;
+      .huodong{
+        width: 57px;
+        height: 29px;
+        background: #E84C47;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 1.2rem;
+        font-weight: 600;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        opacity: .8;
+      }
+      .img_box {
+        width: 12.5rem;
+        height: 12.5rem;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 1rem;
+
+        img {
+          width: auto;
+          height: auto;
+          max-width: 100%;
+          max-height: 100%;
+          /* 向父元素定位 */
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      h2 {
+        color: white;
+        font-size: 1.4rem;
+        line-height: 2.5rem;
+      }
+
+      .cp_tag {
+        span {
+          font-size: 1.2rem;
+          color: rgba(255, 255, 255, .8);
+          line-height: 2.5rem;
+          margin-right: .5rem;
+        }
+      }
+
+      .fxf,
+      .mj {
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, .8);
+        line-height: 2.5rem;
+      }
+
+      i {
+        color: #ED4E34;
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+      }
+    }
+
+    li:nth-of-type(odd) {
+      margin-right: 1.7rem;
+    }
+  }
+
+
+}

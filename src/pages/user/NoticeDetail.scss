@@ -1,0 +1,107 @@
+@import '../../styles/_common';
+
+#noticeDetail {
+  @include clearFix;
+  position: relative;
+  box-sizing: border-box;
+  // background: linear-gradient(180deg, rgba(14, 24, 40, 1) 0%, rgba(9, 14, 25, 1) 100%);
+  // background: rgba(246, 247, 251, 1);
+  min-height: 100vh;
+  padding-top: 6rem;
+  .it_title {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    font-size: 1.6rem;
+    font-family: PingFangSC-Semibold, PingFang SC;
+    font-weight: 600;
+    width: 50%;
+    height: 60px;
+    line-height: 60px;
+    color: white;
+    text-align: center;
+  }
+
+  .no_data {
+    padding-top: 5rem;
+    text-align: center;
+    color: rgba(113, 117, 121, 1);
+  }
+
+  ul {
+    @include clearList;
+    padding: 3rem 1.6rem 1rem 1.6rem;
+
+    li {
+      // margin-top: 2rem;
+      padding-bottom: 1.8rem;
+      // border-bottom: solid 1px #2E3546;
+
+      .notice_title {
+        font-size: 1.4rem;
+        font-family: PingFangSC-Semibold, PingFang SC;
+        font-weight: 600;
+        color: rgba(113, 117, 121, 1);
+        // padding-bottom: 1rem;
+
+        h3 {
+          @include clearBack;
+          font-size: 1.4rem;
+          font-family: PingFangSC-Semibold, PingFang SC;
+          font-weight: 600;
+          color: white;
+          padding-bottom: 1rem;
+        }
+
+        i {
+          font-style: normal;
+          font-size: 1.1rem;
+          font-family: PingFangSC-Semibold, PingFang SC;
+          color: #939393;
+          text-align: right;
+          font-weight: 400;
+          line-height: 2rem;
+          float: right;
+          margin-bottom: 2rem;
+        }
+      }
+
+
+
+      p {
+        margin: 0;
+        font-size: 1.4rem;
+        font-family: PingFangSC-Semibold, PingFang SC;
+        font-weight: 600;
+        color: rgba(113, 117, 121, 1);
+        line-height: 2.2rem;
+        word-break: break-all;
+      }
+    }
+  }
+
+  .detail {
+    padding: 0rem 1.6rem;
+
+    img {
+      width: 100% !important;
+      height: auto !important;
+    }
+
+    p {
+
+      color: white !important;
+      word-break: break-all;
+      text-align: justify;
+    }
+
+    li {
+
+      color: #A5A5A5;
+      word-break: break-all;
+    }
+  }
+
+}

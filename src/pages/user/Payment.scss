@@ -1,0 +1,98 @@
+@import '../../styles/_common';
+
+#Payment {
+  @include clearFix;
+  position: relative;
+  box-sizing: border-box;
+  // background: linear-gradient(180deg, rgba(14, 24, 40, 1) 0%, rgba(9, 14, 25, 1) 100%);
+  // background: rgba(246, 247, 251, 1);
+  min-height: 100vh;
+  padding-top: 6rem;
+  -webkit-touch-callout: none;
+  /*系统默认菜单被禁用*/
+  -webkit-user-select: none;
+  /*webkit浏览器*/
+  -khtml-user-select: none;
+  /*早期浏览器*/
+  -moz-user-select: none;
+  /*火狐*/
+  -ms-user-select: none;
+  /*IE10*/
+  user-select: none;
+
+  ul {
+    @include clearList;
+    // margin-top: 2rem;
+    padding: 1.6rem;
+
+    li:nth-of-type(1) {
+      margin-top: 0;
+    }
+
+    li {
+      position: relative;
+      margin-top: 2rem;
+      padding: 2.4rem 1.8rem;
+      background-color: rgba(26, 32, 46, 1);
+      border-radius: 1rem;
+
+      .sk_title {
+        font-size: 1.4rem;
+        font-family: PingFangSC-Semibold, PingFang SC;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 1);
+        // padding-bottom: 1rem;
+
+        h3 {
+          @include clearBack;
+          font-size: 1.8rem;
+          font-weight: 600;
+          line-height: 2.5rem;
+          color: white;
+          position: relative;
+
+          i {
+            position: absolute;
+            height: 100%;
+            width: 4px;
+            background: white;
+            left: -1.8rem;
+            top: 0;
+          }
+
+          img {
+            position: absolute;
+            height: 100%;
+            right: 0;
+            top: 0;
+          }
+        }
+
+        .u_name {
+          color: #717479;
+          font-size: 1.2rem;
+          line-height:4rem;
+        }
+        .u_num{
+          font-size: 1.8rem;
+          line-height: 2.5rem;
+          color: #FFF;
+        }
+        .u_code{
+          margin-top: 1rem;
+          color: #717479;
+          font-size: 1.2rem;
+          img{
+            height: 3rem;
+          }
+        }
+      }
+
+
+    }
+  }
+
+.btn-box{
+  padding: 1.6rem;
+}
+}

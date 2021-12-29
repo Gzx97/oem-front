@@ -1,0 +1,174 @@
+@import "./styles/mixin";
+
+// appcss
+* {
+  // -webkit-overflow-scrolling: touch !important;
+}
+
+i {
+  font-style: normal;
+}
+
+.App {
+  font-family: $font-style-cn;
+  // color: $text-color;
+  background-color: #131722;
+  min-height: 100vh;
+  font-weight: 600;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+// 小米两百万样式
+.logo {
+  position: relative;
+  display: block;
+  width: 55px;
+  height: 55px;
+  overflow: hidden;
+  border-radius: 19px;
+  background-color: #ff6700;
+}
+
+// input[type='password'] {
+//   // box-sizing: border-box;
+//   font-size: .8rem;
+//   font-weight: 400;
+
+// }
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+p {
+  word-break: break-all;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animated-router {
+  /** START: 自定义进出场动画 **/
+  /** END **/
+}
+
+.animated-router-container {
+  /* 动画容器节点 */
+}
+
+.animated-router-in-transition {
+  /* 页面动画中 */
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.animated-router-forward-enter {
+  transform: translate(100%);
+}
+
+.animated-router-forward-enter-active {
+  transform: translate(0);
+}
+
+.animated-router-forward-exit {
+  transform: translate(0);
+}
+
+.animated-router-forward-exit-active {
+  transform: translate(-100%);
+}
+
+.animated-router-backward-enter {
+  transform: translate(-100%);
+}
+
+.animated-router-backward-enter-active {
+  transform: translate(0);
+}
+
+.animated-router-backward-exit {
+  transform: translate(0);
+}
+
+.animated-router-backward-exit-active {
+  transform: translate(100%);
+}
+
+.animated-router-forward-enter-active,
+.animated-router-forward-exit-active,
+.animated-router-backward-enter-active,
+.animated-router-backward-exit-active {
+  /* 不同过渡阶段需要的过渡时间与缓动效果 */
+  transition: transform 0.3s linear;
+}
+
+.animated-router-forward-exit,
+.animated-router-backward-exit {
+  position: absolute !important;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.goto-jilu {
+  position: absolute;
+  top: 0;
+  right: 1.6rem;
+  z-index: 10000;
+  font-size: 1.4rem;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+  height: 60px;
+  line-height: 60px;
+  // color: rgba(242, 242, 242, 1);
+  // color: #EC4B33;
+  text-align: center;
+  display: flex;
+  align-items: center;
+
+  img {
+    height: 2rem;
+  }
+}
+
+.it_title {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  font-size: 1.6rem;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+  width: 50%;
+  height: 60px;
+  line-height: 60px;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

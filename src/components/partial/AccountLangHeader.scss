@@ -1,0 +1,125 @@
+@import '../../styles/mixin';
+
+.account-lang__header {
+  box-sizing: border-box;
+  padding: 14px;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  // position: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  // background-color: #0E1828;
+  z-index: 9;
+
+  img {
+    // padding: 15px 30px 15px 8px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 15px;
+    width: 17px;
+    height: 17px;
+  }
+
+  ul {
+    @include clearList;
+
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: #EC4B33;
+
+      span {
+        height: 1.4rem;
+      }
+    }
+  }
+
+
+}
+
+  // 选择语言弹框
+  .switch-box {
+    position: fixed;
+    z-index: 10000;
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    .black_box {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 101;
+      background: rgba(9, 14, 25, .3);
+    }
+
+    .kuang {
+      position: absolute;
+      z-index: 102;
+      min-height: 13.4rem;
+      width: 100%;
+      background-color: #1A202E;
+
+      bottom: 0;
+      animation: toup .2s;
+
+      @keyframes toup {
+        0% {
+          bottom: -100%
+        }
+
+        100% {
+          bottom: 0
+        }
+      }
+
+      ;
+
+      .lang {
+        height: 6.7rem;
+        width: 100%;
+        color: #6D778B;
+
+        font-size: 1.8rem;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+      }
+
+      .active-lang {
+        color:  #FFFFFF;
+        position: relative;
+
+        .check_icon {
+          position: absolute;
+          right: 2rem;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+
+      .quxiao {
+        background: linear-gradient(135deg, rgba(99, 106, 246, 1) 0%, rgba(110, 16, 255, 1) 100%);
+        height: 5rem;
+        line-height: 5rem;
+        margin: 1.6rem;
+        text-align: center;
+        border-radius: 2.5rem;
+        color: #FFFFFF;
+        font-size: 1.8rem;
+      }
+    }
+  }

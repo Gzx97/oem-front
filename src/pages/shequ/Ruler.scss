@@ -1,0 +1,60 @@
+@import '../../styles/_common';
+
+#ruler {
+  @include clearFix;
+  position: relative;
+  box-sizing: border-box;
+  background:#FFFFFF;
+  // background: linear-gradient(180deg, rgba(14, 24, 40, 1) 0%, rgba(9, 14, 25, 1) 100%);
+  min-height: 100vh;
+  padding-top: 6rem;
+  -webkit-touch-callout: none;
+  /*系统默认菜单被禁用*/
+  -webkit-user-select: none;
+  /*webkit浏览器*/
+  -khtml-user-select: none;
+  /*早期浏览器*/
+  -moz-user-select: none;
+  /*火狐*/
+  -ms-user-select: none;
+  /*IE10*/
+  user-select: none;
+  .it_title {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    font-size: 1.6rem;
+    font-family: PingFangSC-Semibold, PingFang SC;
+    font-weight: 600;
+    width: 50%;
+    height: 60px;
+    line-height: 60px;
+    color: #051D3F;
+    text-align: center;
+  }
+
+  .ruler_main {
+    margin: 0 1.6rem;
+    font-size: 1.4rem;
+    margin-top: 0rem;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
+    color: #060606;
+    h3 {
+      @include clearBack;
+      font-size: 1.4rem;
+      font-family: PingFangSC-Medium, PingFang SC;
+      font-weight: 600;
+      color:#060606;
+      margin: 1rem 0;
+    }
+
+    p {
+      margin-top: 0;
+      text-align: justify;
+    }
+  }
+
+}

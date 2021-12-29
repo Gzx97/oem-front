@@ -1,0 +1,43 @@
+@import "../../styles/mixin";
+
+#captcha-box {
+  position: relative;
+
+  #captcha {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 3.8rem;
+    width: 9.5rem;
+    // margin-right: 2rem;
+  }
+
+  .input-main {
+    width: 100%;
+    height: 4rem;
+    outline: none;
+    box-sizing: border-box;
+    // color: #8F8E94 !important;
+    color: white !important;
+    // padding-left: 20px;
+    font-size: 1.3rem;
+    @include clearButton;
+    // background: #0E1828;
+    background: #14233a ;
+    // border-radius: 2.2rem;
+    // border-bottom: 1px solid $black-border-bottom;
+
+    &:focus {
+      // border-bottom: 2px solid $primary-color;
+    }
+
+    &::placeholder {
+      // color: $black-font-primary;
+      // font-weight: 500;
+    }
+  }
+
+   
+  
+
+}

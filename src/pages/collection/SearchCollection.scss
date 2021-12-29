@@ -1,0 +1,171 @@
+@import '../../styles/_common';
+
+#SearchCollection {
+  @include clearFix;
+  position: relative;
+  box-sizing: border-box;
+  // background: linear-gradient(180deg, rgba(14, 24, 40, 1) 0%, rgba(9, 14, 25, 1) 100%);
+  min-height: 100vh;
+  padding: 0 1.6rem;
+  padding-top: 6rem;
+  -webkit-touch-callout: none;
+  /*系统默认菜单被禁用*/
+  -webkit-user-select: none;
+  /*webkit浏览器*/
+  -khtml-user-select: none;
+  /*早期浏览器*/
+  -moz-user-select: none;
+  /*火狐*/
+  -ms-user-select: none;
+  /*IE10*/
+  user-select: none;
+
+  .search {
+    // margin: 0 1.6rem;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 99;
+
+    svg {
+      position: absolute;
+      z-index: 100;
+      top: 0;
+      bottom: 0;
+      left: 1rem;
+      width: 1.6rem;
+      height: 1.7rem;
+      margin: auto;
+    }
+
+    input {
+      width: 100%;
+      height: 4.5rem;
+      padding-left: 3.5rem;
+      // border: 1px solidrgba(27, 32, 36, 1);
+      box-sizing: border-box;
+      //   padding-right: 20px;
+      background: #1a202e;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      color: white;
+      -webkit-appearance: none !important;
+      /*去除阴影边框*/
+
+      &::placeholder {
+        // color: @font-sub-color;
+      }
+    }
+  }
+
+  ul {
+    li {
+      background-color: rgba(26, 32, 46, 1);
+      padding: 1.6rem;
+      margin-bottom: 1.6rem;
+      .cp_top_box {
+        display: flex;
+
+        .cp_left {
+          width: 10.6rem;
+          height: 10rem;
+          margin-right: 1.6rem;
+
+          // img {
+          //   width: 10.6rem;
+          //   height: 10rem;
+          // }
+          .img_box {
+            width: 10.6rem;
+            height: 10rem;
+            // display: flex;
+            // align-items: center;
+            // justify-content: center;
+            position: relative;
+            overflow: hidden;
+  
+            img {
+              width: auto;
+              height: auto;
+              max-width: 100%;
+              max-height: 100%;
+              /* 向父元素定位 */
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+        }
+
+        .cp_right {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          width: 100%;
+          h3 {
+            color: rgba(255, 255, 255, 1);
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 2rem;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            padding-right: 5rem;
+            i{
+              position: absolute;
+              right: 0;
+              top: 0;
+              font-size: 1rem;
+              // background-color: #E32A2A;
+              // padding: .2rem 1rem;
+              // border-radius: 1rem;
+              &.loading {
+                color: rgba(113, 116, 121, 1);
+              }
+      
+              &.pending {
+                color: rgba(113, 116, 121, 1);
+              }
+      
+              &.succeed {
+                color: #28CCC5;
+              }
+      
+              &.danger {
+                color: #E32A2A;
+              }
+            }
+          }
+          .cp_tag{
+            span{
+              font-size: 1.2rem;
+              color: rgba(255, 255, 255, .8);
+              line-height: 1.7rem;
+              margin-right: .5rem;
+            }
+          }
+          .fxf{
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, .8);
+            line-height: 1.7rem;
+          }
+        }
+      }
+
+      p {
+        font-weight: 400;
+        color: rgba(255, 255, 255, .8);
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+        margin-top: 1rem;
+        margin-bottom: 0;
+      }
+
+    }
+  }
+
+
+}

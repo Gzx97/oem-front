@@ -1,0 +1,197 @@
+@import '../../styles/_common';
+
+#MyBlindBox {
+  @include clearFix;
+  position: relative;
+  box-sizing: border-box;
+  // background: linear-gradient(180deg, rgba(14, 24, 40, 1) 0%, rgba(9, 14, 25, 1) 100%);
+  min-height: 100vh;
+  padding: 0 1.6rem;
+  padding-top: 6rem;
+  -webkit-touch-callout: none;
+  /*系统默认菜单被禁用*/
+  -webkit-user-select: none;
+  /*webkit浏览器*/
+  -khtml-user-select: none;
+  /*早期浏览器*/
+  -moz-user-select: none;
+  /*火狐*/
+  -ms-user-select: none;
+  /*IE10*/
+  user-select: none;
+
+
+
+  ul {
+    li {
+      background-color: rgba(26, 32, 46, 1);
+      padding: 1.6rem;
+      margin-bottom: 1.6rem;
+
+      .cp_top_box {
+        display: flex;
+
+        .cp_left {
+          width: 10.6rem;
+          height: 10rem;
+          margin-right: 1.6rem;
+
+          img {
+            width: 10.6rem;
+            height: 10rem;
+          }
+        }
+
+        .cp_right {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+
+          h3 {
+            color: rgba(255, 255, 255, 1);
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 2rem;
+            margin: 0;
+          }
+
+          .fxf {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, .8);
+            line-height: 1.7rem;
+          }
+        }
+      }
+
+      .btn_box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1.6rem;
+
+        span {
+          width: 12.7rem;
+          height: 3.7rem;
+          font-size: 1.4rem;
+          border-radius: 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        span:nth-of-type(1) {
+          background-color: white;
+          color: #000;
+        }
+
+        span:nth-of-type(2) {
+          background: linear-gradient(135deg, #EE5035 0%, #E32A2A 100%);
+          color: white;
+        }
+
+
+      }
+
+    }
+  }
+
+  // 购买完成弹框
+  .my_modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    // animation: change 1s;
+    // -moz-animation: change 1s;
+    // -webkit-animation: change 1s;
+    // -o-animation: change 1s;
+
+    .modal_mask {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      height: 100%;
+      z-index: 999;
+      background-color: rgba(14, 6, 6, 0.9);
+    }
+
+    .modal_content {
+      position: relative;
+      z-index: 1000;
+      margin-top: 10rem;
+      // text-align: center;
+
+      h3 {
+        margin: 4.5rem;
+        margin-bottom: 2rem;
+        color: white;
+        font-size: 2rem;
+        text-align: center;
+        line-height: 4rem;
+      }
+
+      .img_box {
+        display: flex;
+        justify-content: center;
+
+        .mh_img {
+          width: 23.6rem;
+        }
+      }
+
+
+      .kh {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 5rem;
+
+        span {
+          width: 12.7rem;
+          height: 3.7rem;
+          font-size: 1.4rem;
+          border-radius: 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        // span:nth-of-type(1) {
+        //   background-color: white;
+        //   color: #000;
+
+        //   img {
+        //     height: 2.5rem;
+        //     margin-right: 1rem;
+        //   }
+        // }
+
+        span:nth-of-type(1) {
+          background: linear-gradient(135deg, #EE5035 0%, #E32A2A 100%);
+          color: white;
+        }
+        span:nth-of-type(2) {
+          background: linear-gradient(135deg, #EE5035 0%, #E32A2A 100%);
+          color: white;
+        }
+      }
+    }
+  }
+
+  @keyframes change {
+
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+
+  }
+
+}

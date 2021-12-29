@@ -1,0 +1,336 @@
+@import '../../styles/_common';
+
+#AddShoukuan {
+  @include clearFix;
+  position: relative;
+  box-sizing: border-box;
+  // background: rgba(245, 245, 245, 1);
+  min-height: 100vh;
+  padding: 0 1.6rem;
+  padding-top: 6rem;
+  -webkit-touch-callout: none;
+  /*系统默认菜单被禁用*/
+  -webkit-user-select: none;
+  /*webkit浏览器*/
+  -khtml-user-select: none;
+  /*早期浏览器*/
+  -moz-user-select: none;
+  /*火狐*/
+  -ms-user-select: none;
+  /*IE10*/
+  user-select: none;
+
+
+
+  .goto-jilu {
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    z-index: 10;
+    width: 18px;
+    height: 19px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  // .goto-jilu {
+  //   position: absolute;
+  //   top: 0;
+  //   right: 1.6rem;
+  //   z-index: 10000;
+  //   font-size: 1.4rem;
+  //   font-family: PingFangSC-Semibold, PingFang SC;
+  //   font-weight: 600;
+  //   height: 60px;
+  //   line-height: 60px;
+  //   // color: rgba(242, 242, 242, 1);
+  //   color: #7C42FF;
+  //   text-align: center;
+  // }
+
+
+  // 表单样式
+  .main-box {
+
+    // background: rgba(245, 245, 245, 1);
+    // border-radius: 15px;
+    // padding-top: 2.8rem;
+    padding-bottom: 2rem;
+
+    // 每个input框
+    .row {
+      h4 {
+        color: white;
+        font-size: 1.4rem;
+        margin: 1.2rem 0;
+      }
+
+      padding: .8rem 0rem 0 0rem;
+      line-height: 1.4;
+
+
+      .input-box {
+        position: relative;
+
+
+        button {
+          color: white;
+        }
+
+
+        input[type='password'],
+        input[type='text'] {
+          box-sizing: border-box;
+          border-radius: 6px;
+          width: 100%;
+          padding: 8px 70px 8px 0;
+          border: none;
+          font-size: 1.3rem;
+          font-family: $font-regular;
+          font-weight: 400;
+          background-color: #1A202E;
+          color: white;
+          // color: white;
+          padding-right: 0;
+          height: 4.5rem;
+          padding: 0 1.2rem;
+          // &:focus {
+          //   border-bottom: 2px solid $primary-color;
+          // }
+
+          &::placeholder {
+            color: #8F8E94;
+          }
+        }
+
+        .eye-img {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 1.2rem;
+          width: 2.2rem;
+          height: 1.3rem;
+          // margin-right: 2rem;
+        }
+
+
+        button {
+          position: absolute;
+          top: 0;
+          right: 1.2rem;
+          bottom: 0;
+          margin: auto;
+          display: flex;
+          align-items: center;
+          padding: 0;
+          border: none;
+          background: transparent;
+          font-size: 1.3rem;
+          font-family: $font-regular;
+          font-weight: 600;
+          color: #7C42FF;
+          // color: white;
+
+          img {
+            margin-right: 5px;
+
+            width: 15px;
+          }
+
+          &.count-down {
+            // color: #ccc;
+          }
+        }
+      }
+
+      small {
+        position: absolute;
+        right: 0;
+        display: flex;
+        justify-content: flex-end;
+        padding: 9px 0;
+        color: #8F8E94;
+      }
+    }
+
+    .shouxvfei {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 1rem;
+      padding-bottom: 1.8rem 1.2rem 1.8rem 1.2rem;
+      font-size: 1.2rem;
+      font-family: PingFangSC-Semibold, PingFang SC;
+      font-weight: 400;
+      color: #000000;
+      padding: 1rem;
+
+      i {
+        color: #000000;
+      }
+
+      .keti {}
+
+      .feiyong {}
+    }
+
+  }
+
+  .btn-box {
+    padding-top: 3.6rem;
+    font-size: 1.4rem;
+    color: #FFFFFF;
+
+  }
+
+  .true_amount {
+    //实际到账
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 2rem;
+    // color: #051D3Fs;s
+  }
+
+  .tishi-box {
+    padding: 0 0rem 2rem 0rem;
+    font-size: 1.2rem;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
+    color: rgba(143, 142, 148, 1);
+
+    h4 {
+      @include clearBack;
+      font-weight: 500;
+      margin-top: 4.5rem;
+    }
+
+    p {
+      margin: 5px 0;
+      line-height: 2rem;
+      text-align: justify;
+
+      li {
+        line-height: 2rem;
+      }
+    }
+  }
+
+  .sfz-sm {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    font-size: 1.2rem;
+
+    span {
+      flex: 1;
+      text-align: center;
+    }
+  }
+
+  // 点击按钮
+  .primary-button {
+    border-radius: 0;
+    background: linear-gradient(135deg, #E32A2A 0%, #E32A2A 100%);
+    border-radius: 5px;
+  }
+
+  .up_box {
+    h4 {
+      color: white;
+      font-size: 1.4rem;
+      margin: 2.7rem 0;
+    }
+
+    .img_list {
+      display: flex;
+
+      .every_upimg {
+        flex: 1;
+      }
+    }
+  }
+
+  // 重置样式
+  //  .am-image-picker-list {
+  //   padding: 0;
+  //   // padding-top: 2rem;
+  // }
+
+
+  // .am-image-picker-upload-btn {
+  //   background-color: rgba(255, 255, 255, 1);
+  //   border: 0;
+  // }
+
+  // .am-image-picker-upload-btn:after {
+  //   // opacity: 0;
+  //   width: 6rem;
+  //   height: 6rem;
+  //   background-color: transparent;
+  //   background-image: url('../../assets/images/gambidding/user/img-after-add.png');
+  //   background-size: 6rem;
+  //   pointer-events: none; //ie10以下不兼容
+  // }
+
+  // .am-image-picker-upload-btn:before {
+  //   width: 12rem;
+  //   height: 12rem;
+  //   background-color: transparent;
+  //   background-image: url('../../assets/images/gambidding/user/img_icon.png');
+  //   background-size: 12rem 12rem;
+  // }
+
+  // 重置样式
+  .am-image-picker-list {
+    padding: 0;
+    // padding-top: 2rem;
+  }
+
+  .am-image-picker-upload-btn {
+    background-color: rgba(26, 32, 46, 1);
+    border: 0;
+  }
+
+  .am-image-picker-upload-btn:after {
+    opacity: .5;
+    width: 4rem;
+    height:4rem;
+    background-color: transparent;
+    background-image: url('../../assets/images/img_add.png');
+    background-size:4rem;
+    pointer-events: none; //ie10以下不兼容
+  }
+
+  .am-image-picker-upload-btn:before {
+    width: 7.9rem;
+    height: 7.9rem;
+    background-color: transparent;
+    background-image: url('../../assets/images/img_icon.png');
+    background-size: 7.9rem 7.9rem;
+  }
+
+
+  .gh_img {
+    .am-image-picker-upload-btn:before {
+      opacity: .5;
+      width: 9rem;
+      height: 9rem;
+      background-color: transparent;
+      background-image: url('../../assets/images/gh.png');
+      background-size: 9rem 9rem;
+    }
+  }
+  .sc_img {
+    .am-image-picker-upload-btn:before {
+      opacity: .5;
+      width: 9rem;
+      height: 9rem;
+      background-color: transparent;
+      background-image: url('../../assets/images/sc.png');
+      background-size: 9rem 9rem;
+    }
+  }
+}

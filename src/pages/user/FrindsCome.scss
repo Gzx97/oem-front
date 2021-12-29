@@ -1,0 +1,84 @@
+@import '../../styles/_common';
+
+#frindsCome {
+  @include clearFix;
+  position: relative;
+  box-sizing: border-box;
+  // background: linear-gradient(180deg, rgba(14, 24, 40, 1) 0%, rgba(9, 14, 25, 1) 100%);
+  min-height: 100vh;
+  padding-top: 6rem;
+  -webkit-touch-callout: none;
+  /*系统默认菜单被禁用*/
+  -webkit-user-select: none;
+  /*webkit浏览器*/
+  -khtml-user-select: none;
+  /*早期浏览器*/
+  -moz-user-select: none;
+  /*火狐*/
+  -ms-user-select: none;
+  /*IE10*/
+  user-select: none;
+
+  .friends_card {
+    margin: 1rem 1.6rem;
+    background: #1A202E;
+    // box-shadow: 1px 1px 4px 0px rgba(210, 210, 210, 0.5);
+    border-radius: 10px;
+    // border: 1px solid #F0F0F0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem;
+
+    p {
+      margin: 0;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: #A1AFC3;
+      line-height: 2rem;
+      text-align: center;
+    }
+
+    .saomiao {
+      color: rgba(5, 29, 63, 1);
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: 2rem;
+      text-align: center;
+    }
+
+    .code_box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 4rem;
+      .canvas_code{
+        padding: 1rem;
+        // background-image: url('../../assets/images/imeta/user/172e21dd0dcf06dbc0466468a18db73.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+      }
+    }
+
+    .yaoqingma {
+      padding-top: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2.2rem;
+      font-weight: 60;
+      line-height: 3rem;
+
+      img {
+        width: 2.2rem;
+        margin-left: .5rem;
+      }
+    }
+  }
+
+
+  .btn-box{
+    padding: 3rem 1.6rem;
+  }
+}

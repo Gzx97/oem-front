@@ -1,0 +1,93 @@
+@import '../../styles/mixin';
+
+footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 80px;
+  // border-top: 1px solid #fafafa;
+  // border-top: 1px solid #fafafa;
+  background: #111622;
+  // border-radius: 38px 38px 0px 0px;
+  box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.15);
+  ul {
+    @include clearList;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 100%;
+    // border-radius: 38px 38px 0px 0px;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      transition: color 0.25s;
+      width: 8rem;
+      height: 6rem;
+      box-sizing: border-box;
+      padding-bottom: 1.6rem;
+      &.active {
+        position: relative;
+
+        img {
+          // padding-bottom: 3px;
+          // border-bottom: 2px solid $primary-color;
+          width: 2rem;
+          height: 2rem;
+        }
+
+        i {
+          transition: color 0.25s;
+          color: #FFFFFF
+        }
+
+        // height: 62px;
+        // border-top: 2px solid;
+        // border-image: -webkit-linear-gradient(#7E00FF,#333,#7E00FF) 30 30;
+      }
+
+      &.active:after {
+        content: '0';
+        font-size: 0;
+        width: 100%;
+        height: 1px;
+        // background: linear-gradient(135deg, rgba(99, 106, 246, 1) 0%, rgba(110, 16, 255, 1) 100%);
+        background-color: #E32A2A;
+        position: absolute;
+        top: -18px;
+        left: 0;
+      }
+
+      img {
+        width: 2rem;
+        height: 2rem;
+        margin-bottom: .5rem;
+      }
+
+      i {
+        @include clearList;
+        font-style: normal;
+        font-size: 14px;
+        font-family: PingFangSC-Semibold, PingFang SC;
+        font-weight: 600;
+        color: #6D778B
+      }
+    }
+
+    // li:nth-of-type(4) {
+    //   img:after {
+    //     width: 7.9rem;
+    //     height: 7.9rem;
+    //     background-color: transparent;
+    //     background-image: url('../../assets/images/userM4D/img_icon.png');
+    //     background-size: 7.9rem 7.9rem;
+    //     content: '';
+    //   }
+    // }
+  }
+}

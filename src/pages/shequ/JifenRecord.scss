@@ -1,0 +1,123 @@
+@import '../../styles/_common';
+
+#JifenRecord {
+  @include clearFix;
+  position: relative;
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding-top: 6rem;
+  -webkit-touch-callout: none;
+  /*系统默认菜单被禁用*/
+  -webkit-user-select: none;
+  /*webkit浏览器*/
+  -khtml-user-select: none;
+  /*早期浏览器*/
+  -moz-user-select: none;
+  /*火狐*/
+  -ms-user-select: none;
+  /*IE10*/
+  user-select: none;
+ 
+  .no_data {
+    padding-top: 5rem;
+    text-align: center;
+    color: rgba(113, 117, 121, 1);
+  }
+
+  ul {
+    @include clearList;
+    padding: 1rem 1.6rem;
+
+    li {
+      position: relative;
+      background-color: #1A202E;
+      padding: 1.4rem 1.6rem;
+      margin-top: 2rem;
+      border-radius: 6px;
+      h2{
+        color: white;
+        font-size: 1.4rem;
+      }
+      i{
+        display: inline-block;
+        font-size: 1.8rem;
+        font-family: PingFangSC-Semibold, PingFang SC;
+        font-weight: 600;
+        color: white;
+        padding-bottom: 1rem;
+      }
+      p {
+        font-size: 1.2rem;
+        font-family: PingFangSC-Semibold, PingFang SC;
+        // font-family: $font-regular;
+        font-weight: 400;
+        color: white;
+        margin: 1rem 0;
+      }
+
+      .time-address {
+        font-size: 1.2rem;
+        font-family: PingFangSC-Semibold, PingFang SC;
+        font-weight: 400;
+        color: white;
+        word-wrap: break-word;
+        word-break: break-all;
+        margin-bottom: 1rem;
+        overflow: hidden;
+        i{
+          display: inline-block;
+          font-size: 1.2rem;
+          padding-bottom: 0;
+          font-family: PingFangSC-Semibold, PingFang SC;
+          font-weight: 400;
+          color: white;
+          max-width: 20rem ;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        img{
+          width: 1.2rem;
+          margin-left: .5rem;
+        }
+      }
+
+      span {
+        //@include overflow(1);
+        // width: 5.6rem;
+        height: 1.7rem;
+        line-height: 1.7rem;
+        font-size: 1.2rem;
+        text-align: center;
+        font-weight: 400;
+        display: inline-block;
+        word-break: break-word;
+        position: absolute;
+        right: 1.4rem;
+        top:50%;
+        transform: translateY(-50%);
+
+        &.loading {
+          color: rgba(113, 116, 121, 1);
+        }
+
+        &.pending {
+          color: rgb(61, 111, 192);
+        }
+
+        &.succeed {
+          color: #28CCC5;
+        }
+
+        &.danger {
+          color: #CC284D;
+        }
+      }
+    }
+    li:nth-of-type(1){
+      margin: 0;
+    }
+  }
+
+
+}

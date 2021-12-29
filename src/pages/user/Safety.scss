@@ -1,0 +1,71 @@
+@import '../../styles/_common';
+
+#safety {
+  @include clearFix;
+  position: relative;
+  box-sizing: border-box;
+  // background: linear-gradient(180deg, rgba(14, 24, 40, 1) 0%, rgba(9, 14, 25, 1) 100%);
+  min-height: 100vh;
+  padding-top: 6rem;
+  -webkit-touch-callout: none;
+  /*系统默认菜单被禁用*/
+  -webkit-user-select: none;
+  /*webkit浏览器*/
+  -khtml-user-select: none;
+  /*早期浏览器*/
+  -moz-user-select: none;
+  /*火狐*/
+  -ms-user-select: none;
+  /*IE10*/
+  user-select: none;
+  .it_title {
+
+    // font-size: 3.6rem;
+    font-weight: 600;
+    color: white;
+    padding: 0 1.6rem;
+  }
+  ul {
+    @include clearList;
+    margin-top: 4.5rem;
+    // border-radius: 1.5rem;
+    overflow: hidden;
+    // border-top: .1rem solid #979797;
+    // border-top: .1rem solid rgba(151, 151, 151, .5);
+    border-top: 1px solid rgba(151, 151, 151, .1);
+
+
+    li {
+      position: relative;
+    padding: 0 1.6rem;
+
+      // background-color: #0E1828;
+      display: flex;
+      height: 6rem;
+      align-items: center;
+      margin-top: .2rem;
+      font-size: 1.6rem;
+      font-family: PingFangSC-Medium, PingFang SC;
+      font-weight: 400;
+      // color: rgba(255, 255, 255, 1);
+      color: white;
+
+      // border-bottom: .1rem solid rgba(151, 151, 151, .5);
+      border-bottom: 1px solid rgba(151, 151, 151, .1);
+
+      svg {
+        position: absolute;
+        right: 1.9rem;
+      }
+
+      img {
+        // margin-left: 1.7rem;
+        margin-right: 1.5rem;
+        width: 2.6rem;
+        height: 2.6rem;
+      }
+    }
+  }
+
+
+}

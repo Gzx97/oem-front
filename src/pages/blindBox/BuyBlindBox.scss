@@ -1,0 +1,301 @@
+@import "../../styles/_common";
+
+#Buy️BlindBox {
+  position: relative;
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 0 1.6rem;
+  padding-top: 6rem;
+  padding-bottom: 8rem;
+
+  -webkit-touch-callout: none;
+  /*系统默认菜单被禁用*/
+  -webkit-user-select: none;
+  /*webkit浏览器*/
+  -khtml-user-select: none;
+  /*早期浏览器*/
+  -moz-user-select: none;
+  /*火狐*/
+  -ms-user-select: none;
+  /*IE10*/
+  user-select: none;
+
+
+
+  // 顶部
+
+
+  .mh_img {
+
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+
+    img {
+      width: 20rem;
+    }
+  }
+
+  h2 {
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    margin: 2rem 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    del{
+      margin-left: .5rem;
+      font-size: 1.2rem;
+      // background: linear-gradient(135deg, #EE5035 0%, #E32A2A 100%);
+      // padding:.5rem;
+      color: #EE5035;
+      border-radius: 1rem;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+  }
+
+  // 藏品信息
+  .cp_info_box {
+    font-size: 1.2rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid #6D778B;
+    line-height: 2.8rem;
+
+    .cp_info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #6D778B;
+
+      span:nth-of-type(2) {
+        color: white;
+      }
+    }
+  }
+
+  .maybe_have {
+    padding: 2rem 0;
+    border-bottom: 1px solid #6D778B;
+
+    .ti2 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      span:nth-of-type(1) {
+        color: white;
+        font-size: 1.4rem;
+      }
+
+      span:nth-of-type(2) {
+        color: #6D778B;
+        font-size: 1.2rem;
+        text-decoration: underline;
+      }
+    }
+
+    // z广告
+    .advertise {
+      height: 12rem;
+      width: 100%;
+      // border: 1px solid white;
+      display: flex;
+      align-items: center;
+      // justify-content: space-between;
+      padding: 2rem 0;
+      box-sizing: border-box;
+      margin-top: 2rem;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      .every_gg {
+        float: left;
+        display: flex;
+        // height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 1.8rem;
+
+        img {
+          height: 8.8rem;
+          // width: 9.5rem;
+        }
+
+        span {
+          font-size: 1.4rem;
+          color: white;
+          margin-top: 1.5rem;
+          margin-bottom: 1.5rem;
+          line-height: 1.6rem;
+        }
+      }
+
+    }
+  }
+
+  // 藏品说明
+  .cp_detail_box {
+    h3 {
+      margin: 1.9rem 0;
+      font-size: 1.4rem;
+      line-height: 2rem;
+      color: white;
+    }
+
+    p {
+      margin: 0;
+      font-size: 1.2rem;
+      color: #6D778B;
+      line-height: 2.2rem;
+    }
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 8rem;
+    background-color: #1A202E;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    span {
+      width: 14.7rem;
+      height: 3.7rem;
+      font-size: 1.4rem;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    span:nth-of-type(1) {
+      background-color: white;
+      // color: white;
+      color: #000;
+
+
+      img {
+        height: 2.5rem;
+        margin-right: 1rem;
+      }
+    }
+
+    span:nth-of-type(2) {
+      background: linear-gradient(135deg, #EE5035 0%, #E32A2A 100%);
+      color: white;
+    }
+
+  }
+
+  // 购买完成弹框
+  .my_modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    // animation: change 1s;
+    // -moz-animation: change 1s;
+    // -webkit-animation: change 1s;
+    // -o-animation: change 1s;
+
+    .modal_mask {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      height: 100%;
+      z-index: 999;
+      background-color: rgba(14, 6, 6, 0.6);
+    }
+
+    .modal_content {
+      position: relative;
+      z-index: 1000;
+      margin-top: 10rem;
+
+      h3 {
+        margin: 4.5rem;
+        color: white;
+        font-size: 2rem;
+        text-align: center;
+      }
+
+      .mh_img {
+        width: 23.6rem;
+        margin: 0 auto;
+      }
+
+      .kh {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 5rem;
+
+        span {
+          width: 14.7rem;
+          height: 3.7rem;
+          font-size: 1.4rem;
+          border-radius: 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        span:nth-of-type(1) {
+          background-color: white;
+          color: #000;
+
+          img {
+            height: 2.5rem;
+            margin-right: 1rem;
+          }
+        }
+
+        span:nth-of-type(2) {
+          background: linear-gradient(135deg, #EE5035 0%, #E32A2A 100%);
+          color: white;
+        }
+      }
+    }
+  }
+
+  @keyframes change {
+
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+
+  }
+   // 点击放大
+   .big_img {
+    position: fixed;
+    width: 100vw;
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(14, 24, 40, .6);
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+}
